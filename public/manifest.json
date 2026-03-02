@@ -1,0 +1,22 @@
+{
+  "name": "OCEAN S&I - Negócios Imobiliários",
+  "short_name": "OCEAN S&I",
+  "description": "Corretora de imóveis especializada em vendas de alto padrão",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-ocean.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo-ocean.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
