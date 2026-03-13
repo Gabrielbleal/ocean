@@ -48,7 +48,7 @@ const jsonLd = {
   description: "Corretora de imóveis especializada em vendas de alto padrão",
   url: "https://oceansi.com.br",
   telephone: "+55-11-99999-9999",
-  email: "contato@oceansi.com.br",
+  email: "ocean.imob25@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "São Paulo",

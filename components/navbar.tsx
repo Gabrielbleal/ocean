@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
+  { label: "Análise de Crédito", href: "/analise-credito" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Portfólio", href: "#vendas" },
   { label: "Contato", href: "#contato" },
@@ -50,14 +51,26 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-6 lg:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
-                className="text-sm text-white/80 transition-colors hover:text-primary"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className="text-sm text-white/80 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target={link.href === "/analise-credito" ? "_blank" : undefined}
+                  rel={link.href === "/analise-credito" ? "noopener noreferrer" : undefined}
+                  className="text-sm text-white/80 transition-colors hover:text-primary"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -96,14 +109,26 @@ export function Navbar() {
         >
           <div className="rounded-xl bg-card/95 backdrop-blur-sm p-4 space-y-1 border border-primary/10">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
-                className="block py-3 px-4 rounded-lg text-center text-white/80 transition-colors hover:text-primary hover:bg-primary/5"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                  className="block py-3 px-4 rounded-lg text-center text-white/80 transition-colors hover:text-primary hover:bg-primary/5"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target={link.href === "/analise-credito" ? "_blank" : undefined}
+                  rel={link.href === "/analise-credito" ? "noopener noreferrer" : undefined}
+                  className="block py-3 px-4 rounded-lg text-center text-white/80 transition-colors hover:text-primary hover:bg-primary/5"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <div className="pt-3 border-t border-primary/10 mt-2">
               <Button

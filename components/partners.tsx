@@ -6,8 +6,8 @@ import Image from "next/image"
 const partners = [
   { name: "Minha Casa Minha Vida", logo: "/minha%20casa%20minha%20vida.jpg" },
   { name: "Casa Paulista", logo: "/casa%20paulista.png" },
-  { name: "Caixa Econômica", logo: "/caixa%20logo%20of.png" },
   { name: "CRECI", logo: "/creci.png" },
+  { name: "Caixa Econômica", logo: "/caixa%20logo%20of.png" },
   { name: "Bradesco", logo: "/bradesco.jpg" },
 ]
 

@@ -47,7 +47,7 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>(19) 99174-0548</li>
-              <li>contato@oceansi.com.br</li>
+              <li>ocean.imob25@gmail.com</li>
               <li>Campinas, SP</li>
             </ul>
             {/* Redes sociais */}

@@ -74,7 +74,7 @@ Fico no aguardo do retorno. Obrigado(a)!`
               </a>
 
               <a
-                href="mailto:contato@oceansi.com.br"
+                href="mailto:ocean.imob25@gmail.com"
                 className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
@@ -87,7 +87,7 @@ Fico no aguardo do retorno. Obrigado(a)!`
                     />
                   </svg>
                 </div>
-                contato@oceansi.com.br
+                ocean.imob25@gmail.com
               </a>
 
               <div className="flex items-center gap-3 text-white/80">
