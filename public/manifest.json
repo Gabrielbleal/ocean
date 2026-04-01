@@ -1,7 +1,7 @@
 {
   "name": "OCEAN S&I - Negócios Imobiliários",
   "short_name": "OCEAN S&I",
-  "description": "Corretora de imóveis especializada em vendas de alto padrão",
+  "description": "Corretora de imóveis especializada em vendas",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

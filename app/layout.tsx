@@ -14,10 +14,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "OCEAN S&I | Negócios Imobiliários de Alto Padrão",
+  title: "OCEAN S&I | Negócios Imobiliários",
   description:
-    "Corretora de imóveis especializada em vendas de alto padrão. Mais de 10 anos de experiência transformando sonhos em endereços. CRECI ativo.",
-  keywords: ["imóveis", "corretora", "imobiliária", "alto padrão", "São Paulo", "comprar imóvel", "vender imóvel"],
+    "Corretora de imóveis especializada em vendas. Mais de 10 anos de experiência transformando sonhos em endereços. CRECI ativo.",
+  keywords: ["imóveis", "corretora", "imobiliária", "São Paulo", "comprar imóvel", "vender imóvel"],
   authors: [{ name: "OCEAN S&I" }],
   manifest: "/manifest.json",
   icons: {
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     apple: "/logo-ocean.jpeg",
   },
   openGraph: {
-    title: "OCEAN S&I | Negócios Imobiliários de Alto Padrão",
-    description: "Corretora de imóveis especializada em vendas de alto padrão. Mais de 10 anos de experiência.",
+    title: "OCEAN S&I | Negócios Imobiliários",
+    description: "Corretora de imóveis especializada em vendas. Mais de 10 anos de experiência.",
     type: "website",
     locale: "pt_BR",
     images: ["/logo-ocean.jpeg"],
@@ -45,7 +45,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   name: "OCEAN S&I Negócios Imobiliários",
-  description: "Corretora de imóveis especializada em vendas de alto padrão",
+  description: "Corretora de imóveis especializada em vendas",
   url: "https://oceansi.com.br",
   telephone: "+55-11-99999-9999",
   email: "ocean.imob25@gmail.com",

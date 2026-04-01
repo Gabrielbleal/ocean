@@ -1,20 +1,20 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { AnimatedSection } from "@/components/animated-section"
 
 const sales = [
-  { id: 1, title: "Apartamento de Luxo", location: "Jardins, São Paulo", image: "/luxury-apartment-exterior.png" },
-  { id: 2, title: "Casa com Piscina", location: "Alphaville, Barueri", image: "/luxury-house-with-pool.png" },
-  { id: 3, title: "Cobertura Premium", location: "Moema, São Paulo", image: "/penthouse-ocean-view.jpg" },
-  { id: 4, title: "Casa de Campo", location: "Granja Viana, Cotia", image: "/luxury-country-house.png" },
-  { id: 5, title: "Loft Moderno", location: "Vila Madalena, SP", image: "/modern-luxury-loft.jpg" },
-  { id: 6, title: "Mansão Exclusiva", location: "Morumbi, São Paulo", image: "/exclusive-mansion.jpg" },
+  { id: 9, title: "Splend Home Club, Hortolândia", location: "Hortolândia, SP", image: "/projetos/Splend/0CDC54D8-90F4-4E0A-89B7-5ADDBA6B850F.png" },
+  { id: 1, title: "Viva Parque Sense, Indaiatuba", location: "Indaiatuba, SP", image: "/projetos/viva-parque-sense/ChatGPT Image 28 de mar. de 2026, 00_08_25.png" },
+  { id: 2, title: "ONI Inglaterra, Sumaré", location: "Alphaville, Barueri", image: "/projetos/oniinglaterra/oni_inglaterra.JPEG" },
+  { id: 4, title: "Vem Viver Ares, Campinas", location: "Campinas", image: "/projetos/vemviverares/vemviverares2.jpeg" },
+  { id: 5, title: "Reserva Laguna, Indaiatuba", location: "Indaiatuba, SP", image: "/projetos/novolarlaguna/C9FC0190-07DD-4315-BF00-7B85AE4F92D0.png" },
+  { id: 8, title: "Ecovila Tulipa, Hortolândia", location: "Hortolândia, SP", image: "/projetos/ecovila-tulipa/0E82AC47-9C14-4DDF-8404-BFEA617A866D (1).jpeg" },
 ]
 
 export function Gallery() {
-  const [lightboxImage, setLightboxImage] = useState<(typeof sales)[0] | null>(null)
+
 
   return (
     <section id="vendas" className="py-16 px-4 md:py-24 bg-card/30">
@@ -22,9 +22,10 @@ export function Gallery() {
         {/* Header */}
         <AnimatedSection className="text-center mb-12">
           <span className="text-primary text-sm tracking-widest uppercase">Portfólio</span>
-          <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-white">Vendas Realizadas</h2>
+          <h2 className="mt-2 text-2xl sm:text-3xl md:text-4xl font-bold text-white">Projetos Em Destaque</h2>
           <p className="mt-3 text-muted-foreground max-w-lg mx-auto">
-            Alguns dos imóveis que ajudamos nossos clientes a conquistar
+            Empreendimentos que selecionamos<br />
+            para quem busca morar bem ou investir com segurança.
           </p>
         </AnimatedSection>
 
@@ -32,8 +33,8 @@ export function Gallery() {
         <div className="grid gap-4 grid-cols-2 lg:grid-cols-3">
           {sales.map((sale, index) => (
             <AnimatedSection key={sale.id} delay={index * 100}>
-              <button
-                onClick={() => setLightboxImage(sale)}
+              <Link
+                href={`/portfolio/vendidos/${sale.id === 1 ? "viva-parque-sense" : sale.id === 9 ? "Splend" : sale.id === 8 ? "ecovila-tulipa" : `projeto-${sale.id}`}`}
                 className="group relative overflow-hidden rounded-xl border border-primary/10 bg-card w-full text-left"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -41,11 +42,16 @@ export function Gallery() {
                     src={sale.image || "/placeholder.svg"}
                     alt={sale.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`object-cover transition-transform duration-500 ${sale.id === 3 ? 'group-hover:scale-102' : 'group-hover:scale-105'}`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-semibold">
-                    Vendido
+                    Disponível
+                  </div>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <span className="block text-lg font-bold text-white drop-shadow-md bg-black/40 rounded px-2 py-1">
+                      {sale.title}
+                    </span>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="w-12 h-12 rounded-full bg-primary/80 flex items-center justify-center">
@@ -69,9 +75,21 @@ export function Gallery() {
                   <h3 className="text-sm sm:text-base font-semibold text-white truncate">{sale.title}</h3>
                   <p className="text-xs sm:text-sm text-white/70 truncate">{sale.location}</p>
                 </div>
-              </button>
+              </Link>
             </AnimatedSection>
           ))}
+        </div>
+
+        {/* Botão Ver mais */}
+        <div className="flex justify-center mt-8">
+          <button
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg shadow-lg hover:bg-primary/90 transition-all text-lg font-semibold"
+            type="button"
+            disabled
+            title="Em breve você poderá ver mais imóveis do portfólio."
+          >
+            Ver mais
+          </button>
         </div>
 
         {/* CTA */}
@@ -91,38 +109,7 @@ export function Gallery() {
         </AnimatedSection>
       </div>
 
-      {lightboxImage && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4"
-          onClick={() => setLightboxImage(null)}
-        >
-          <button
-            className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-            onClick={() => setLightboxImage(null)}
-          >
-            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image
-                src={lightboxImage.image || "/placeholder.svg"}
-                alt={lightboxImage.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-semibold text-white">{lightboxImage.title}</h3>
-              <p className="text-muted-foreground">{lightboxImage.location}</p>
-              <span className="inline-block mt-2 bg-primary text-primary-foreground px-3 py-1 rounded text-sm font-semibold">
-                Vendido
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
+
     </section>
   )
 }

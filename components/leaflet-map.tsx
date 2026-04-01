@@ -30,30 +30,58 @@ export function LeafletMap() {
       }).addTo(map)
       const apartamentos = [
         {
-          nome: "Residencial Parque Central",
-          cidade: "Campinas - SP",
-          bairro: "Centro",
-          preco: "A partir de R$ 220.000",
-          lat: -22.9056,
-          lng: -47.0608,
-          link: "https://seusite.com/imovel/parque-central"
+          nome: "Viva Parque Sense",
+          cidade: "Indaiatuba - SP",
+          bairro: "",
+          preco: "",
+          lat: -23.059365549581056,
+          lng: -47.21344157546773,
+          link: "/portfolio/vendidos/viva-parque-sense"
         },
         {
-          nome: "Residencial Jardim das Flores",
+          nome: "ONI Inglaterra",
           cidade: "Sumaré - SP",
-          bairro: "Jardim Maria Antônia",
-          lat: -22.8219,
-          lng: -47.2669,
-          link: "https://seusite.com/imovel/jardim-das-flores"
+          bairro: "",
+          preco: "",
+          lat: -22.819524075384635,
+          lng: -47.28820202883552,
+          link: "/portfolio/vendidos/projeto-2" // Corrigir para rota amigável se existir
         },
         {
-          nome: "Residencial Vila Verde",
+          nome: "Vem Viver Ares",
+          cidade: "Campinas - SP",
+          bairro: "",
+          preco: "",
+          lat: -22.938702211488103,
+          lng: -47.16640609180981,
+          link: "/portfolio/vendidos/projeto-4"
+        },
+        {
+          nome: "Reserva Laguna (NovaLarLaguna)",
+          cidade: "Campinas - SP",
+          bairro: "",
+          preco: "",
+          lat: -23.077407175498443,
+          lng: -47.22536687054517,
+          link: "/portfolio/vendidos/projeto-5"
+        },
+        {
+          nome: "Splend Home Club, Hortolândia",
           cidade: "Hortolândia - SP",
-          bairro: "Vila Real",
-          preco: "A partir de R$ 210.000",
-          lat: -22.8583,
-          lng: -47.2201,
-          link: "https://seusite.com/imovel/vila-verde"
+          bairro: "",
+          preco: "",
+          lat: -22.887122983978504,
+          lng: -47.23091819320736,
+          link: "/portfolio/vendidos/Splend"
+        },
+        {
+          nome: "Ecovila Tulipa, Hortolândia",
+          cidade: "Hortolândia - SP",
+          bairro: "",
+          preco: "",
+          lat: -22.874751875002627,
+          lng: -47.20765669320917,
+          link: "/portfolio/vendidos/ecovila-tulipa"
         }
       ]
       const markersGroup = L.featureGroup().addTo(map)

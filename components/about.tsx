@@ -15,8 +15,8 @@ export function About() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Imagem */}
           <AnimatedSection className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10">
-              <Image src="/luxury-real-estate-office.jpg" alt="Escritório OCEAN S&I" fill className="object-cover" />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-primary/10 translate-x-4 -translate-y-2">
+              <Image src="/IMG_9682.JPEG" alt="Escritório OCEAN S&I" fill className="object-cover" />
             </div>
             <div
               ref={statsRef}

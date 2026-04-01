@@ -45,7 +45,7 @@ export default function Home() {
       {/* Mapa pequeno ao lado do botão do WhatsApp com ícone customizado */}
       {!mapOpen && (
         <button
-          className="fixed bottom-5 right-24 z-50 w-14 h-14 border border-gray-300 bg-blue-600 rounded-lg overflow-hidden flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-blue-700 focus:outline-none"
+          className="fixed bottom-5 right-5 z-50 w-14 h-14 border border-gray-300 bg-blue-600 rounded-lg overflow-hidden flex items-center justify-center transition-all duration-300 shadow-lg hover:bg-blue-700 focus:outline-none"
           onClick={() => setMapOpen(true)}
           aria-label="Abrir mapa de apartamentos"
           type="button"

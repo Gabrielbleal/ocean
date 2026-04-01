@@ -10,7 +10,7 @@ export function WhatsAppButton() {
   return (
     <button
       onClick={openWhatsApp}
-      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 active:scale-95"
+      className="fixed bottom-5 right-24 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 active:scale-95"
       aria-label="WhatsApp"
     >
       <svg className="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
